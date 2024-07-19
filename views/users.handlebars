@@ -1,0 +1,26 @@
+<h1>Lista de Usuários</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each users}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.nome}}</td>
+            <td>{{this.idade}}</td>
+            <td>{{this.email}}</td>
+            <td>
+                <a href="/cad/{{this.id}}"><button>Atualizar Usuário</button></a>
+                <a href="/users/{{this.id}}"><button>Deletar</button></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
